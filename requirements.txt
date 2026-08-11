@@ -1,0 +1,9 @@
+torch
+torch-geometric
+networkx
+opencv-python
+cryptography
+fastapi
+uvicorn
+numpy
+requests

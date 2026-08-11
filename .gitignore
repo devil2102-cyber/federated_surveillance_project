@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Generated files
+cia_audit.log
+server/global_model_state.pt

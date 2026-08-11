@@ -23,7 +23,7 @@ To ensure public trust and legal compliance, the architecture is strictly bound 
 *   **System Hardening:** All client-to-server communication is restricted to secure protocols (SSH/TLS) with strict firewall rules blocking unauthorized port access.
 
 ## Project Structure
-\`\`\`text
+```text
 federated_surveillance_project/
 ├── server/                              # Central Aggregator Environment
 │   ├── aggregator.py                    
@@ -48,30 +48,30 @@ federated_surveillance_project/
 │   └── cia_compliance_logger.py         
 ├── requirements.txt                     
 └── README.md                            
-\`\`\`
+```
 
 ## Installation & Deployment
 
 1. **Clone the repository:**
-   \`\`\`bash
+   ```bash
    git clone https://github.com/your-org/DeepTrace.git
    cd DeepTrace
-   \`\`\`
+   ```
 
 2. **Install core dependencies:**
    The environment requires PyTorch for neural network execution and NetworkX for graph pathfinding.
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 3. **Deploy the Aggregator Server:**
    Initialize the central server to begin listening for incoming encrypted weights.
-   \`\`\`bash
-   uvicorn server.aggregator:app --host 0.0.0.0 --port 8000
-   \`\`\`
+   ```bash
+   python server/aggregator.py
+   ```
 
-4. **Initialize an Edge Client:**
-   Launch the local processing unit to begin constructing the adjacency list and training the local GNN.
-   \`\`\`bash
-   python client_edge/models/federated_client.py
-   \`\`\`
+4. **Initialize an Edge Client (Dashboard):**
+   Launch the local processing dashboard to interact with the network graph and federated client.
+   ```bash
+   streamlit run app.py
+   ```
